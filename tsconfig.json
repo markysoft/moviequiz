@@ -2,10 +2,17 @@
     "compilerOptions": {
         "target": "es5",
         "module": "commonjs",
+         "moduleResolution": "node",
         "sourceMap": true,
         "watch": true,
         "noImplicitAny": false
     },
+    "include": [
+        "src/**/*"
+    ],
+    "files": [    
+      "node_modules/typescript/lib/lib.es6.d.ts"
+    ],
     "exclude": [
         "node_modules"
     ]

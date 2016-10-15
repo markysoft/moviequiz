@@ -3,13 +3,15 @@
   "version": "0.0.1",
   "description": "IMDB Quiz.",
   "main": "app.js",
-  "author": "Scotch",
+  "author": "Mark H",
   "dependencies": {
-    "express": "latest",
-    "request": "latest",
-    "cheerio": "latest",
-    "rxjs" : "latest",
-    "underscore": "latest"
+    "cheerio": "0.22.0",
+    "es6-promise": "4.0.5",
+    "express": "4.14.0",
+    "form-data": "2.1.1",
+    "request": "2.75.0",
+    "rxjs": "5.0.0-rc.1",
+    "underscore": "1.8.3"
   },
   "devDependencies": {},
   "scripts": {
