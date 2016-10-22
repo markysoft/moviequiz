@@ -3,6 +3,7 @@
   "dependencies": {},
   "globalDependencies": {
     "cheerio": "registry:dt/cheerio#0.17.0+20160930124405",
+    "jasmine": "registry:dt/jasmine#2.5.0+20161003201800",
     "node": "registry:dt/node#6.0.0+20161008175459",
     "request": "registry:dt/request#0.0.0+20160726020908",
     "underscore": "registry:dt/underscore#1.8.3+20160908111004"

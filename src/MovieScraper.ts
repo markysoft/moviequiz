@@ -7,6 +7,7 @@ import { Movie } from "./Movie";
 import { MovieList } from "./MovieList";
 import { MovieBuilder } from "./MovieBuilder";
 import Promise = require('es6-promise');
+
 export class MovieScraper {
 
     private TOP_250_PAGE = 'http://www.imdb.com/chart/top';
@@ -38,6 +39,9 @@ export class MovieScraper {
         var subscr = this.moviesSubject.subscribe(
             (movies: Movie[]) => {
                 this.populateMovie(this.movies.getFirst());
+            },
+            (error: any) => {
+                console.log("Could not load movies :" + error);
             }
         );
     }

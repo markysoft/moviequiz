@@ -1,6 +1,6 @@
 import { Movie } from "./Movie";
 import { MovieList } from "./MovieList";
-import { PageHelper, ElementWrapper } from "./PageHelper";
+import { PageHelper, ElementWrapper } from './PageHelper';
 import _ = require('underscore');
 
 export class MovieBuilder {
@@ -22,6 +22,7 @@ export class MovieBuilder {
         movie.summary = page.one(".summary_text").getContent();
         movie.poster = page.one(".poster a").getHref();
         movie.rating = Number(page.one(".ratingValue strong span").getContent());
+        this.addGenres(movie, page);
         console.log(`movie: ${movie.title}`);
     }
 
@@ -36,6 +37,12 @@ export class MovieBuilder {
         var page = new PageHelper(html);
         _.each(page.many(".sodatext a"), (link) => {
             movie.keywords.push(link.getContent());
+        });
+    }
+
+    public static addGenres(movie: Movie, page: PageHelper) {
+        _.each(page.many('div[itemprop="genre"] a'), (link) => {
+            movie.genres.push(link.getContent());
         });
     }
 }
