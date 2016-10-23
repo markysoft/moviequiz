@@ -1,6 +1,7 @@
-import { Movie } from "./Movie";
-import { MovieList } from "./MovieList";
-import { PageHelper, ElementWrapper } from './PageHelper';
+import { MovieList } from './../domain/MovieList';
+import { PageHelper, ElementWrapper } from './../services/moviescraper/PageHelper';
+import { Movie } from './../domain/Movie';
+
 import _ = require('underscore');
 
 export class MovieBuilder {

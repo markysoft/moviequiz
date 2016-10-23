@@ -1,14 +1,9 @@
-import { Movie } from './Movie';
+import { Movie } from './../domain/Movie';
+import { Question } from './../domain/Question';
 import { NumberHelper } from './NumberHelper';
-import { MovieScraper } from './MovieScraper';
+
 import _ = require('underscore');
 
-export class Question{
-    public answer: number;
-    constructor(public movies: Movie[], public movie: Movie, public keyword: string){
-        this.answer = movies.indexOf(movie);
-    }
-}
 
 export class QuestionBuilder {
     private duplicates: string[];

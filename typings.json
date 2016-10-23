@@ -1,6 +1,8 @@
 {
   "name": "node-web-scrape",
-  "dependencies": {},
+  "dependencies": {
+    "express": "registry:npm/express#4.14.0+20160925001530"
+  },
   "globalDependencies": {
     "cheerio": "registry:dt/cheerio#0.17.0+20160930124405",
     "jasmine": "registry:dt/jasmine#2.5.0+20161003201800",

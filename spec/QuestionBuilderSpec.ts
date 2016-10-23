@@ -1,11 +1,10 @@
 ///<reference path="../typings/index.d.ts"/>
-import { MovieService } from '../src/MovieService';
-import { Movie } from './../src/Movie';
-import { QuestionBuilder } from './../src/QuestionBuilder';
+import { MovieService } from './../src/services/MovieService';
+import { QuestionBuilder } from './../src/lib/QuestionBuilder';
+
 import Jasmine = require('jasmine');
 import _ = require('underscore');
 const service = new MovieService();
-
 
 describe("Choose movie and keyword", () => {
 

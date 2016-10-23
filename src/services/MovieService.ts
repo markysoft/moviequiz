@@ -1,6 +1,7 @@
-import { Movie } from "./Movie";
-import { MovieList } from './MovieList';
-import { NumberHelper } from './NumberHelper';
+import { Movie } from './../domain/Movie';
+import { NumberHelper } from './../lib/NumberHelper';
+import { QuestionBuilder } from './../lib/QuestionBuilder';
+import { Question } from './../domain/Question';
 import _ = require('underscore');
 
 export class MovieService {
@@ -8,7 +9,13 @@ export class MovieService {
     private movies: Movie[];
 
     constructor() {
-        this.movies = require('../moviesList.json');
+        this.movies = require('../../moviesList.json');
+    }
+
+    public createQuestion(total: number) : Question{
+        var movies = this.GetRandomMovies(total);
+        const helper = new QuestionBuilder(movies);
+        return helper.createQuestion();
     }
 
     public GetRandomMovies(total: number): Movie[] {
@@ -18,7 +25,7 @@ export class MovieService {
             selectedMovies.push(this.movies[index]);
         })
         return selectedMovies;
-    }    
+    }
 
     private getRandomIndices(total: number): number[] {
         const indices: number[] = [];

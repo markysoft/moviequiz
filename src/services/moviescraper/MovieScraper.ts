@@ -1,11 +1,11 @@
-///<reference path="../typings/index.d.ts"/>
+///<reference path="../../../typings/index.d.ts"/>
+import { Movie } from './../../domain/Movie';
+import { MovieList } from './../../domain/MovieList';
+import { MovieBuilder } from './../../lib/MovieBuilder';
 import request = require('request');
 import Rx = require('rxjs/Rx');
 import _ = require('underscore');
 import fs = require('fs');
-import { Movie } from "./Movie";
-import { MovieList } from "./MovieList";
-import { MovieBuilder } from "./MovieBuilder";
 import Promise = require('es6-promise');
 
 export class MovieScraper {
