@@ -1,5 +1,5 @@
-import { MovieService } from './../src/services/MovieService';
-///<reference path="../typings/index.d.ts"/>
+import { MovieService } from './../services/MovieService';
+///<reference path="../../typings/index.d.ts"/>
 import Jasmine = require('jasmine');
 const service = new MovieService();
 

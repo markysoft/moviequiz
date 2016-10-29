@@ -1,5 +1,5 @@
-///<reference path="../typings/index.d.ts"/>
-import { MovieService } from './../src/services/MovieService';
+///<reference path="../../typings/index.d.ts"/>
+import { MovieService } from './../services/MovieService';
 
 "use strict"
 import express = require("express");
@@ -9,8 +9,6 @@ const movieService = new MovieService();
 
 export class Server {
     private app: express.Application
-    private movieService: MovieService;
-
     constructor() {
         this.app = express();
     }

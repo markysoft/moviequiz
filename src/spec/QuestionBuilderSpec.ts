@@ -1,6 +1,6 @@
-///<reference path="../typings/index.d.ts"/>
-import { MovieService } from './../src/services/MovieService';
-import { QuestionBuilder } from './../src/lib/QuestionBuilder';
+///<reference path="../../typings/index.d.ts"/>
+import { MovieService } from './../services/MovieService';
+import { QuestionBuilder } from './../lib/QuestionBuilder';
 
 import Jasmine = require('jasmine');
 import _ = require('underscore');

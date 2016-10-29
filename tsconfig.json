@@ -5,7 +5,8 @@
          "moduleResolution": "node",
         "sourceMap": true,
         "watch": true,
-        "noImplicitAny": false
+        "noImplicitAny": false,
+        "outDir": "dist"
     },
     "include": [
         "src/**/*",
